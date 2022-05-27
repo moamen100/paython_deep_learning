@@ -77,7 +77,7 @@ vocab.set_default_index(vocab["<unk>"])
 #     >>> [475, 21, 30, 5297]
 #
 # Prepare the text processing pipeline with the tokenizer and vocabulary. The text and label pipelines will be used to process the raw data strings from the dataset iterators.
-
+! pipe install tourchdata
 text_pipeline = lambda x: vocab(tokenizer(x))
 label_pipeline = lambda x: int(x) - 1
 
